@@ -1,30 +1,147 @@
-[![HitCount](http://hits.dwyl.com/ishandeveloper/Portfolio.svg)](http://hits.dwyl.com/ishandeveloper/Portfolio)
-## Portfolio [Progressive Web App]
-#### A clean, beautiful and fully responsive progressive web app based portfolio template for Developers! 
-##### Optimized For Github Pages
+# Bay
 
-<img src="https://github.com/ishandeveloper/Portfolio/blob/master/screenshots/1.png?raw=false">
+[![Version](https://img.shields.io/gem/v/bay_jekyll_theme)](https://rubygems.org/gems/bay_jekyll_theme)
+[![Downloads](https://img.shields.io/gem/dt/bay_jekyll_theme)](https://rubygems.org/gems/bay_jekyll_theme)
 
-<pre>P.S. This project is still in development phase.</pre>
-<pre><a href="https://ishandeveloper.com/Portfolio/">VIEW LIVE DEMO</a></pre>
+Bay is a simple theme for Jekyll. [[view live]](https://eliottvincent.github.io/bay)
 
-### TECHNOLOGIES USED
-* HTML5
-* CSS
-* JAVASCRIPT
-* BOOTSTRAP
-* FONT AWESOME 5
+Inspired by [dangrover.com](http://dangrover.com/). Current theme used at [eliottvincent.com](http://eliottvincent.com/).
 
-##### [Desktop]
-<img src="https://github.com/ishandeveloper/Portfolio/blob/master/screenshots/1.png?raw=false" width="45%">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/ishandeveloper/Portfolio/blob/master/screenshots/3.png?raw=false" width="45%">
-##### [Mobile]
-<img src="https://github.com/ishandeveloper/Portfolio/blob/master/screenshots/1-mobile.png?raw=false" width="20%">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/ishandeveloper/Portfolio/blob/master/screenshots/3-mobile.png?raw=false" width="20%">
+![](/screenshot.png)
 
-### Just a sidenote ✉
-I value keeping this site open source, but as you all know, plagiarism is bad. I spent a non-negligible amount of effort developing, designing, and trying to perfect this iteration of my website, and I am proud of it! All I ask is to not claim this effort as your own.
+### Installation
 
-So, feel free to fork this repo. If you do, please just give me proper credit by linking back to my website.
 
-##### Made with ❤ by <a href="https://github.com/ishandeveloper">ishandeveloper</a>
+The easiest solution is to [fork this repo](https://github.com/eliottvincent/bay/fork).
+If you want to start from a clean website, follow the steps below:
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/ishandeveloper)
+Create a new Jekyll website:
+```
+jekyll new mysite
+```
+
+Open `Gemfile` and replace the line:
+```
+gem "minima"
+```
+with:
+```
+gem "bay_jekyll_theme"
+```
+
+Open `_config.yml` and replace the line:
+```
+theme: minima
+```
+with:
+```
+theme: bay_jekyll_theme
+```
+or, for GitHub Pages:
+```
+remote_theme: eliottvincent/bay
+```
+
+Finally, install the dependencies:
+```
+bundle install
+```
+
+and build the website!
+```
+jekyll serve
+```
+
+
+The website will look somewhat empty at first. That's normal. Follow the next instructions to complete the header and footer components, and the home and blog pages.
+
+### Header
+Open the `_config.yml` file and add the following:
+```yml
+header:
+  pages:
+    - name: Home
+      slug: /     # <-- index.md
+    - name: Blog  # <-- blog.md
+    - name: Whatever  # <-- whatever.md
+```
+Re-run `jekyll serve` to see the header updated.
+
+### Footer
+Open the `_config.yml` file and add the following:
+```yml
+footer:
+  show_powered_by: true
+  contact:
+    - name: Email
+      value: yourmail@domain.com
+      link: mailto:yourmail@domain.com
+    - name: WeChat
+      value: YourWeChatUsername
+      link: "#"
+  follow:
+    - name: Twitter
+      link: http://twitter.com/YourTwitterUsername
+      username: "@YourTwitterUsername"
+    - name: Facebook
+      link: http://facebook.com/YourFacebookUsername
+    - name: LinkedIn
+      link: http://linkedin.com/in/YourLinkedInUsername
+    - name: GitHub
+      link: http://github.com/YourGitHubUsername
+    - name: Dribbble
+      link: https://dribbble.com/YourDribbbleUsername
+    - name: Weibo
+      link: http://weibo.com/u/YourWeiboUsername
+    - name: RSS
+      link: /feed.xml
+```
+Re-run `jekyll serve` to see the footer updated.
+
+### Home page
+Create (or edit) the `index.markdown` file and add the following:
+```yml
+---
+layout: home
+profile_picture:
+  src: /assets/img/profile-pic.jpg
+  alt: website picture
+---
+
+<p>
+  Welcome to mysite!
+</p>
+```
+
+### Blog page
+Create `blog.markdown` file and add the following:
+```yml
+---
+layout: blog
+title: Blog
+slug: /blog
+---
+
+This is an example of a "Blog" page, displaying a list of posts.
+<br />
+```
+
+
+Your website is ready!
+
+
+### Development
+
+#### Run development instance (with hot-reload)
+```sh
+bundle exec jekyll serve
+```
+
+#### Build and publish the gem
+```sh
+gem build bay_jekyll_theme.gemspec
+```
+
+```sh
+gem push bay_jekyll_theme-1.x.x.gem
+```
