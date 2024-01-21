@@ -1,147 +1,41 @@
-# Bay
+<h1>Hi, I'm Adam! <br/><a r</a>Scientist, Farmer, Podcaster</h1>
 
-[![Version](https://img.shields.io/gem/v/bay_jekyll_theme)](https://rubygems.org/gems/bay_jekyll_theme)
-[![Downloads](https://img.shields.io/gem/dt/bay_jekyll_theme)](https://rubygems.org/gems/bay_jekyll_theme)
+<h2> 🧪 Research </h2>
 
-Bay is a simple theme for Jekyll. [[view live]](https://eliottvincent.github.io/bay)
+- <b>Geminivirus Resistance in Mustard Plants</b>
+  - [Praciting DS & Algos in Python](https://github.com/joshmadakor1/Algorithms-Practice)
 
-Inspired by [dangrover.com](http://dangrover.com/). Current theme used at [eliottvincent.com](http://eliottvincent.com/).
+<h2> 📃 My CV </h2>
 
-![](/screenshot.png)
+- [Put Something Here](https://www.youtube.com/watch?v=a83ASGn_V_s)
 
-### Installation
+[<h2> 🎙️ My Podcast</h2>](https://www.buzzsprout.com/2209928)
 
+- [Crop Talk Podcast](https://www.buzzsprout.com/2209928)
 
-The easiest solution is to [fork this repo](https://github.com/eliottvincent/bay/fork).
-If you want to start from a clean website, follow the steps below:
+<h2> ☎️ Connect with me:</h2>
 
-Create a new Jekyll website:
-```
-jekyll new mysite
-```
+[<img align="left" alt="JoshMadakor | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
+[<img align="left" alt="JoshMadakor | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
+[<img align="left" alt="JoshMadakor | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="JoshMadakor | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
 
-Open `Gemfile` and replace the line:
-```
-gem "minima"
-```
-with:
-```
-gem "bay_jekyll_theme"
-```
+[twitter]: 
+[youtube]: 
+[instagram]: https://www.instagram.com/adamhales72/
+[linkedin]: https://www.linkedin.com/in/adam-hales-546900226/
 
-Open `_config.yml` and replace the line:
-```
-theme: minima
-```
-with:
-```
-theme: bay_jekyll_theme
-```
-or, for GitHub Pages:
-```
-remote_theme: eliottvincent/bay
-```
+<!--
+**joshmadakor1/joshmadakor1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Finally, install the dependencies:
-```
-bundle install
-```
+Here are some ideas to get you started:
 
-and build the website!
-```
-jekyll serve
-```
-
-
-The website will look somewhat empty at first. That's normal. Follow the next instructions to complete the header and footer components, and the home and blog pages.
-
-### Header
-Open the `_config.yml` file and add the following:
-```yml
-header:
-  pages:
-    - name: Home
-      slug: /     # <-- index.md
-    - name: Blog  # <-- blog.md
-    - name: Whatever  # <-- whatever.md
-```
-Re-run `jekyll serve` to see the header updated.
-
-### Footer
-Open the `_config.yml` file and add the following:
-```yml
-footer:
-  show_powered_by: true
-  contact:
-    - name: Email
-      value: yourmail@domain.com
-      link: mailto:yourmail@domain.com
-    - name: WeChat
-      value: YourWeChatUsername
-      link: "#"
-  follow:
-    - name: Twitter
-      link: http://twitter.com/YourTwitterUsername
-      username: "@YourTwitterUsername"
-    - name: Facebook
-      link: http://facebook.com/YourFacebookUsername
-    - name: LinkedIn
-      link: http://linkedin.com/in/YourLinkedInUsername
-    - name: GitHub
-      link: http://github.com/YourGitHubUsername
-    - name: Dribbble
-      link: https://dribbble.com/YourDribbbleUsername
-    - name: Weibo
-      link: http://weibo.com/u/YourWeiboUsername
-    - name: RSS
-      link: /feed.xml
-```
-Re-run `jekyll serve` to see the footer updated.
-
-### Home page
-Create (or edit) the `index.markdown` file and add the following:
-```yml
----
-layout: home
-profile_picture:
-  src: /assets/img/profile-pic.jpg
-  alt: website picture
----
-
-<p>
-  Welcome to mysite!
-</p>
-```
-
-### Blog page
-Create `blog.markdown` file and add the following:
-```yml
----
-layout: blog
-title: Blog
-slug: /blog
----
-
-This is an example of a "Blog" page, displaying a list of posts.
-<br />
-```
-
-
-Your website is ready!
-
-
-### Development
-
-#### Run development instance (with hot-reload)
-```sh
-bundle exec jekyll serve
-```
-
-#### Build and publish the gem
-```sh
-gem build bay_jekyll_theme.gemspec
-```
-
-```sh
-gem push bay_jekyll_theme-1.x.x.gem
-```
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+-->
