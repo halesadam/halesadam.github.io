@@ -1,4 +1,4 @@
-<h1>Hi, I'm Adam! <br/><a r</a>Scientist, Farmer, Podcaster</h1>
+<h1>Hi, I'm Adam! <br/>Scientist, Farmer, Podcaster</h1>
 
 <h2> 🧪 Research </h2>
 
