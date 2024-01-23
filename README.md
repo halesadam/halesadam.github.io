@@ -3,7 +3,6 @@
 <h2> 🧪 Research </h2>
 
 - <b>Geminivirus Resistance in Mustard Plants</b>
-  - [Praciting DS & Algos in Python](https://github.com/joshmadakor1/Algorithms-Practice)
 
 <h2> 📃 My CV </h2>
 
