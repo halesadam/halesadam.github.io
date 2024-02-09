@@ -2,7 +2,7 @@
 
 <h2> 🧪 Research </h2>
 
-- [Geminivirus Resistance In Mustard Plants](https://www.youtube.com/watch?v=a83ASGn_V_s)
+- [Geminivirus Resistance In Mustard Plants](/Users/adamhales/Downloads/Brassica_Abstract.html)
   
 
 <h2> 📃 My CV </h2>
