@@ -3,7 +3,6 @@
 <br/>Scientist, Farmer, Podcaster</h1>
 
 
-
 <h2> 🧪 Research </h2>
 
 - [Geminivirus Resistance In Mustard Plants](/Users/adamhales/Downloads/Brassica_Abstract.html)
