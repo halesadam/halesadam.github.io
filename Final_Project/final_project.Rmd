@@ -1,5 +1,5 @@
 ---
-title: "Adam K Hales"
+title: "Final Project"
 output: html_document
 ---
 
@@ -7,9 +7,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This is my personal website which includes information about my current projects and other information about me. 
+# Uncovering Genetic Resistance to DNA Viruses in Brassica species
 
-Check out a [Final Project](halesadam.github.io/Final_Project/final_project.html) for my current research. 
 
 
 ## R Markdown
