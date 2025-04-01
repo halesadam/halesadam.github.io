@@ -1,32 +1,38 @@
 ---
 title: "Final Project"
-output: html_document
+output: 
+  html_document:
+    theme: flatly
+    highlight: tango
+    toc: true
+    toc_depth: 2
+    toc_float: true
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Uncovering Genetic Resistance to DNA Viruses in Brassica species
+## Uncovering Genetic Resistance to DNA Viruses in *Brassica* Species
+
+#### Hales, A. K., Lazarte, L., Laney, A., Liang, Y . Y .
 
 
+### Introduction
+This is where I will put some junk about the project. 
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+197 Accessions were requested from the USDA germplasm system to be screened for virus disease resistance. The country of origin for these accessions can be seen below. 
+```{r, echo=FALSE}
+knitr::include_graphics("Plots/p2_Country.png")
 ```
 
-## Including Plots
+### Results
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+DSR Distribution for Season 1
+```{r, echo = FALSE}
+knitr::include_graphics("Plots/p3_1_DSR_by_sp.png")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+DSR Distribition for Season 2
+
