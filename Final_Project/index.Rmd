@@ -52,7 +52,7 @@ We fitted a lmer model to explain this data given the important variables being 
 Let's see how origin and species affected the DSR. Note Stars indicate statistical significance
 
 ```{r}
-knitr::include_graphics("Models/m1_origin.png")
+knitr::include_graphics("Models/m1_1_origin.png")
 ```
 
 

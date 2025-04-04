@@ -8,7 +8,7 @@ library(ranger)
 library(lme4)
 #install.packages("lmerTest")
 library(lmerTest)
-install.packages("MuMIn")
+#install.packages("MuMIn")
 library(MuMIn)
 library(broom.mixed)
 #install.packages("sjPlot")
@@ -99,7 +99,7 @@ m1 <- ggplot(fixed_effects_origin, aes(x = reorder(clean_term, estimate), y = es
        y = "Effect on DSR") +
   theme_bw()
 
-ggsave("./Plots/m1_origin.png", plot = m1, width = 10, height = 10, dpi = 300)
+ggsave("./Models/m1_1_origin.png", plot = m1, width = 10, height = 10, dpi = 300)
 
 #make a similar plot but using species
 fixed_effects_species <- fixed_effects %>%

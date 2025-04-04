@@ -68,10 +68,9 @@ origin_df <- read_csv("./Data/Origin_Sheet.csv")
 View(origin_df)
 
 # Replace "Georgia" with "United States" in the Origin column
-origin_df$Origin[df$Origin == "Georgia"] <- "United States"
+origin_df$Origin[origin_df$Origin == "Georgia"] <- "United States"
 
-#make sure we got rid of it
-df[df$Origin == "Georgia", ]
+View(origin_df)
 
 #rename ID
 origin_df <- origin_df %>% 
