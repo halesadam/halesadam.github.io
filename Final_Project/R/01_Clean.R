@@ -131,7 +131,6 @@ df_merged_1 <- df_dsr %>%
 write.csv(df_merged_1, "./Data/Merged_DSR_Origin_Dataset_Accession.csv", row.names = FALSE)
 
 
-
 #give me a list of the accessions that had the lowest average DSR
 low_dsr <- df_merged_1 %>%
   filter(!is.na(DSR), !is.na(Species)) %>%
