@@ -67,6 +67,12 @@ origin_df <- read_csv("./Data/Origin_Sheet.csv")
 
 View(origin_df)
 
+# Replace "Georgia" with "United States" in the Origin column
+origin_df$Origin[df$Origin == "Georgia"] <- "United States"
+
+#make sure we got rid of it
+df[df$Origin == "Georgia", ]
+
 #rename ID
 origin_df <- origin_df %>% 
   rename(ID = 'ID #') 
@@ -94,9 +100,14 @@ write.csv(Accession, "./Data/cleaned_origin_sheet_Accession.csv", row.names = FA
 df_origin <- read.csv("./Data/cleaned_origin_sheet.csv", stringsAsFactors = FALSE)
 df_dsr <- read.csv("./Data/cleaned_DSR.csv", stringsAsFactors = FALSE)
 
+#Rename Accession_ID to ID
+names(df_dsr)[names(df_dsr) == "Accession_ID"] <- "ID"
+
+df_origin$ID <- as.character(df_origin$ID)
+df_dsr$ID <- as.character(df_dsr$ID)
+
 #merge the two
-df_merged <- df_dsr %>%
-  left_join(df_origin, by = c("Accession_ID" = "ID"))
+df_merged <- left_join(df_dsr, df_origin, by = "ID")
 
 #check up to see how it looks
 glimpse(df_merged)
