@@ -29,7 +29,7 @@ knitr::include_graphics("Plots/p4_count.png")
 
 The country of origin for these accessions can be seen below. 
 ```{r}
-knitr::include_graphics("Plots/p2_Country.png")
+knitr::include_graphics("Plots/p2_Country_OK.png")
 ```
 
 ### Results
@@ -45,17 +45,17 @@ knitr::include_graphics("Plots/p3_3_DSR_by_sp.png")
 
 ### Discussion
 We fitted a lmer model to explain this data given the important variables being tested Origin and Species.
-
+```{r}
+htmltools::includeHTML("./Models/Model_Summary.html")
+```
 
 Let's see how origin and species affected the DSR. Note Stars indicate statistical significance
-
 ```{r}
 knitr::include_graphics("Models/m1_1_origin.png")
 ```
 
 
 Now here is Species
-
 ```{r}
 knitr::include_graphics("Models/m2_species.png")
 ```

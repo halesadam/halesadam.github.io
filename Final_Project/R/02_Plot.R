@@ -11,6 +11,9 @@ library(ggrepel)
 library(sf)
 library(knitr)
 library(gt)
+#install.packages("countrycode")
+library(countrycode)
+
 
 #load data set
 df <- read_csv("./Data/Merged_DSR_Origin_Dataset.csv")
@@ -50,22 +53,30 @@ anim_save("./Plots/p1_anim.gif", animation = p1_anim)
 
 
 #2. Plot accesions across the world
+#take df and change "United States" to United States of America
+df$Origin <- ifelse(df$Origin == "United States", "United States of America", df$Origin)
+
+
 # Summarize to get count per country
-origin_summary <- df_clean %>%
-  distinct(Accession_ID, Origin) %>%  # Keep only unique accession-country pairs
+origin_summary <- df %>%
+  distinct(ID, Origin) %>%  # Keep only unique accession-country pairs
   group_by(Origin) %>%
   summarise(Accessions = n()) %>%
   ungroup()
+
+View(origin_summary)
 
 # Get country centroids for mapping
 world_map <- ne_countries(scale = "medium", returnclass = "sf")
 
 country_coords <- world_map %>%
   st_centroid() %>%
-  select(name, geometry) %>%
+ dplyr::select(name, geometry) %>%
   mutate(long = st_coordinates(geometry)[,1],
          lat = st_coordinates(geometry)[,2]) %>%
   as.data.frame()
+
+View(world_map)
 
 # Join your data with country coordinates
 map_data <- origin_summary %>%
@@ -95,7 +106,7 @@ p2 <-
   )
 
 #save plot
-ggsave("./Plots/p2_Country.png", plot = p2, width = 10, height = 6, dpi = 300)
+ggsave("./Plots/p2_Country_OK.png", plot = p2, width = 10, height = 6, dpi = 300)
 
 
 #3. Make boxplot showing average DSR for each sp for season 1 and season 2
@@ -151,7 +162,7 @@ ggsave("./Plots/p3_3_DSR_by_sp.png", plot = p_3_DSR_by_sp, width = 10, height = 
 #4.Make col plot showing number of sp.
 #dataset is long format - keep only unique accessions
 accession_counts <- df_clean %>%
-  distinct(Accession_ID, Species) %>%
+  distinct(ID, Species) %>%
   filter(!is.na(Species)) %>%
   count(Species, name = "Number_Accessions")
 
@@ -176,7 +187,7 @@ lowest_dsr <- lowest_dsr %>%
   slice_head(n = 50)
 
 lowest_accession_counts <- lowest_dsr %>%
-  distinct(Accession_ID, Species) %>%
+  distinct(ID, Species) %>%
   filter(!is.na(Species)) %>%
   count(Species, name = "Number_Accessions")
 
@@ -199,7 +210,6 @@ Accession <- read.csv("./Data/low_dsr_with_accession")
 
 #great, now let's reorder the columns to make it pretty
 Accession <- Accession %>% 
-  select(Accession_ID, Accession, Species, Avg_DSR) %>% 
   rename("Study ID" = Accession_ID,
          "Germplasm Accession Number" = Accession,
          "Average DSR" = Avg_DSR)
@@ -210,4 +220,6 @@ kable(Accession)
 #another way
 Accession %>%
   gt() 
+
+
 

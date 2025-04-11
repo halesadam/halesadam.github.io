@@ -44,12 +44,12 @@ compare_performance(mod1, mod2)
   #Random effects: Season, Block, and Rep
 
 #lmer model
-model_lmer <- lmer(DSR ~ Origin + Species + (1|Season) + (1|Block) + (1|Rep), data = df_clean)
+model_lmer <- lmer(DSR ~ Origin + Species + (1|Season/Block) + (1|Rep), data = df_clean)
 
 #test
 # Refit model with lmerTest to get p-values
 # These P values tell us wheather each origin or species effect is statistically important
-model_lmer_test <- lmer(DSR ~ Origin + Species + (1|Season) + (1|Block) + (1|Rep), data = df_clean)
+model_lmer_test <- lmer(DSR ~ Origin + Species + (1|Season/Block) + (1|Rep), data = df_clean)
 
 # See summary with p-values
 #this model shows:
