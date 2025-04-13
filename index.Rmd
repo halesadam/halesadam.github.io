@@ -2,38 +2,73 @@
 title: "Adam K Hales"
 output: 
   html_document:
-    theme: cosmo
+    theme: null
     highlight: tango
     toc: false
     number_sections: false
     css: styles.css
-    
-
 ---
+<!-- Embedded custom CSS for styling -->
+<style>
+body {
+  background-color: #808080; 
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  color: #1a1a1a; /* Strong dark text */
+  padding: 50px;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #F5F5F5;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+img {
+  float: right;
+  width: 180px;
+  height: auto;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Photo shadow */
+}
+</style>
+
+<!-- Start of page content -->
+
+<div class="container">
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This is my personal website which includes information about my current projects and other information about me. 
+<img src="./Images/me.jpeg" alt="My Photo" style="float: right; width: 200px; margin: 10px;">
 
-Check out a [Final Project](http://halesadam.github.io/Final_Project/) for my current research. 
+### Hi, I'm Adam! <br> 
+This is my personal website landing page which also includes information about me, my research interests and current and past projects.
 
-<div style="text-align: center; margin-top: 30px;"> <img src="your-photo.jpg" alt="My Photo" style="width:200px; border-radius: 50%; box-shadow: 0px 4px 12px rgba(0,0,0,0.2);"> </div>
+---
 
-I am currently a student at Utah Valley University in Orem, Utah where I study botany and plant breeding. Starting in August, 2025 I will be moving positions to that of a PhD student in the Integrated Plant Sciences Program at the University of Georgia. 
+I am currently a botany student at Utah Valley University in Orem, Utah. Starting August of 2025 I will be changing positions to that of a PhD student in the Integrated Plant Sciences Program at the University of Georgia. 
 
-My research focuses on virus diesease resistance in *Brassica* species. 
+---
 
-Featured Project
-[Brassica](http://halesadam.github.io/Final_Project/)
-Discover my work on virus disease resistance in *Brassica* species. 
+#### Featured Project
+[Brassica](http://halesadam.github.io/Final_Project/): Discover my work on virus disease resistance in *Brassica* species. 
 
-About Me
-Outside of research, I enjoy [your hobbies, e.g., hiking, reading historical fiction, photography].
-I value collaboration, innovation, and lifelong learning.
+#### About Me
+I grew up farming and ranching in northern Utah where I first developed a love for plants and producing food to feed the world. <br> I chose to take that passion and to make it the discipline of my academic career. <br> Outside of farming and research, I enjoy playing guitar, reading, cooking/baking, and playing golf.
 
-📧 Email: [halesadam02@gmail.com]
+#### Contact 
 
-🌐 [Your LinkedIn] | [Your Google Scholar] | [Your Twitter]
+📧 Email: halesadam02@gmail.com
 
+🌐 [My LinkedIn](http://www.linkedin.com/in/adam-hales-546900226)
