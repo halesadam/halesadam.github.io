@@ -218,8 +218,10 @@ Accession <- Accession %>%
 kable(Accession)
 
 #another way
-Accession %>%
+Accession_Table <- Accession %>%
   gt() 
 
+#save this as html under plots
+gtsave(Accession_Table, "./Plots/Accession_Table.html")
 
 
