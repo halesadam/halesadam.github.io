@@ -13,6 +13,7 @@ library(MuMIn)
 library(broom.mixed)
 #install.packages("sjPlot")
 library(sjPlot)
+library(gt)
 
 df <- read_csv("./Data/Merged_DSR_Origin_Dataset.csv")
 
@@ -67,9 +68,31 @@ r.squaredGLMM(model_lmer)
 fixed_effects <- broom.mixed::tidy(model_lmer, effects = "fixed")
 
 #make a clean, tidy version of fixed effects
-tab_model(model_lmer)
+mod_summary <- tab_model(model_lmer)
 
 tab_model(model_lmer, file = "./Models/Model_Summary.html")
+
+#let's make one that is just the significant one
+# Filter to only significant ones (p.value < 0.05)
+fixed_effects_sig <- fixed_effects %>%
+  filter(p.value < 0.05) %>% 
+  select(-c(effect))
+
+#remove effect because they are all the same
+fixed_effects_sig <- fixed_effects_sig %>% 
+  dplyr::select(-effect)
+
+# Create and save table
+fixed_effects_sig %>%
+  gt() %>%
+  tab_header(
+    title = "Significant Fixed Effects on DSR (p < 0.05)"
+  ) %>%
+  fmt_number(
+    columns = c(estimate, std.error, statistic, p.value),
+    decimals = 3
+  ) %>%
+  gtsave("./Models/Sig_Fixed_Effects.html")
 
 
 #make a plot showing the importance of Origin on DSR

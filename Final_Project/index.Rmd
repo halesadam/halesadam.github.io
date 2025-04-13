@@ -110,7 +110,7 @@ knitr::include_graphics("Plots/p3_3_DSR_by_sp.png")
 
 ---
 
-#### Highest Performing Accessions
+#### Accession Performance
 - A list of accessions screened can be found below in ascending order of DSR
 - Note germplasm accession number, which is the official identification tag of that particular accession
 
@@ -136,6 +136,11 @@ htmltools::includeHTML("./Models/Model_Summary.html")
 ```
 </details>
 - When accounting for random effects, this model explained about 74 percent of the dataset.
+
+Below is a table of the significant predictors of DSR.
+```{r echo=FALSE, error=FALSE, message=FALSE, warning=FALSE, results='asis'}
+htmltools::includeHTML("./Models/Sig_Fixed_Effects.html")
+```
 
 ---
 

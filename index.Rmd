@@ -1,5 +1,5 @@
 ---
-title: "Adam K Hales"
+title: ""
 output: 
   html_document:
     theme: null
@@ -53,7 +53,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <img src="./Images/me.jpeg" alt="My Photo" style="float: right; width: 200px; margin: 10px;">
 
 ### Hi, I'm Adam! <br> 
-This is my personal website landing page which also includes information about me, my research interests and current and past projects.
+This is my personal website landing page which also includes information about me, my research interests, and current/past projects.
 
 ---
 
