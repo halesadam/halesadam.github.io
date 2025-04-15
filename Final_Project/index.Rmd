@@ -139,7 +139,7 @@ htmltools::includeHTML("./Models/Model_Summary.html")
 
 Below is a table of the significant predictors of DSR.
 ```{r echo=FALSE, error=FALSE, message=FALSE, warning=FALSE, results='asis'}
-htmltools::includeHTML("./Models/Sig_Fixed_Effects.html")
+htmltools::includeHTML("./Models/Sig_Fixed_Effects_1.html")
 ```
 
 ---

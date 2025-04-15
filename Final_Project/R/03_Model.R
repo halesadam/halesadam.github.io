@@ -76,11 +76,8 @@ tab_model(model_lmer, file = "./Models/Model_Summary.html")
 # Filter to only significant ones (p.value < 0.05)
 fixed_effects_sig <- fixed_effects %>%
   filter(p.value < 0.05) %>% 
-  select(-c(effect))
-
-#remove effect because they are all the same
-fixed_effects_sig <- fixed_effects_sig %>% 
-  dplyr::select(-effect)
+  dplyr::select(-c(effect)) %>% 
+  mutate(term = str_replace(term, "^(Origin|Species)", "\\1:"))
 
 # Create and save table
 fixed_effects_sig %>%
@@ -92,7 +89,7 @@ fixed_effects_sig %>%
     columns = c(estimate, std.error, statistic, p.value),
     decimals = 3
   ) %>%
-  gtsave("./Models/Sig_Fixed_Effects.html")
+  gtsave("./Models/Sig_Fixed_Effects_1.html")
 
 
 #make a plot showing the importance of Origin on DSR
