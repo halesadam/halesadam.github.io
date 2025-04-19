@@ -80,7 +80,7 @@ knitr::include_graphics("Plots/p2_Country_OK.png")
 - To evaluate plants' response to infection, a novel disease severity rating (DSR) was developed, as there were no previously reported evaluation metrics for this virus-host interaction. 
 - The DSR used a scale from 1 to 10 to assess the plant’s condition following infection, where a score of '1' indicated complete plant health, and '10' represented complete plant death.
 ```{r}
-knitr::include_graphics("./Images/DSR_Collage.png")
+knitr::include_graphics("./Images/DSR_Collage_2.png")
 ```
 
 ---
@@ -163,7 +163,7 @@ The effect of species on DSR is shown below. Note that the asteriks indicate the
 - __* indicates a p-value of ≤ 0.05.__
 - No asteriks indicate no statistical significance.
 ```{r}
-knitr::include_graphics("Plots/m2_1_species.png")
+knitr::include_graphics("Models/m2_1_species.png")
 ```
 
 ---
