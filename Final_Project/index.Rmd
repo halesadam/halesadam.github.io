@@ -56,7 +56,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - Species diversity was of great importance to us in this study. To this extent, accessions from 10 different
   *Brassica* species were screened.
 ```{r}
-knitr::include_graphics("Plots/p4_count.png")
+knitr::include_graphics("Plots/p4_1_count.png")
 ```
 - Additionally, it was important to us to screen accessions from across the world, as genetic information underlying virus disease resistance could be from the wild-type populations. 
 ```{r}
@@ -105,7 +105,7 @@ knitr::include_graphics("Plots/p1_anim.gif")
 - Note the low average DSR for *gravinae*, *fruiticulosa*, and *oleraceae* species.
 
 ```{r}
-knitr::include_graphics("Plots/p3_3_DSR_by_sp.png")
+knitr::include_graphics("Plots/p3_4_DSR_by_sp.png")
 ```
 
 ---
@@ -163,7 +163,7 @@ The effect of species on DSR is shown below. Note that the asteriks indicate the
 - __* indicates a p-value of ≤ 0.05.__
 - No asteriks indicate no statistical significance.
 ```{r}
-knitr::include_graphics("Models/m2_species.png")
+knitr::include_graphics("Plots/m2_1_species.png")
 ```
 
 ---

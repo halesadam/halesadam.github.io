@@ -143,6 +143,7 @@ m2 <- ggplot(fixed_effects_species, aes(x = reorder(clean_term, estimate), y = e
   labs(title = "Effect of Species on DSR",
        x = "Species",
        y = "Effect on DSR") +
-  theme_bw()
+  theme_bw() +
+  theme(axis.text.y = element_text(face = "italic"))
 
-ggsave("./Plots/m2_species.png", plot = m2, width = 10, height = 10, dpi = 300)
+ggsave("./Models/m2_1_species.png", plot = m2, width = 10, height = 10, dpi = 300)

@@ -155,9 +155,10 @@ p_3_DSR_by_sp <- ggplot(df_clean)+
     title = "DSR Distribution across Study",
     x = "Species",
     y = "DSR"
-  )
+  )+
+  theme(axis.text.x = element_text(face = "italic"))
 
-ggsave("./Plots/p3_3_DSR_by_sp.png", plot = p_3_DSR_by_sp, width = 10, height = 6, dpi = 300)
+ggsave("./Plots/p3_4_DSR_by_sp.png", plot = p_3_DSR_by_sp, width = 10, height = 6, dpi = 300)
 
 #4.Make col plot showing number of sp.
 #dataset is long format - keep only unique accessions
@@ -175,9 +176,10 @@ p4 <- ggplot(accession_counts, aes(x = fct_reorder(Species, -Number_Accessions),
     x = "Species",
     y = "Number of Accessions"
   ) +
-  theme(legend.position = "none")
+  theme(legend.position = "none") +
+  theme(axis.text.x = element_text(face = "italic"))
 
-ggsave("./Plots/p4_count.png", plot = p4, width = 10, height = 6, dpi = 300)
+ggsave("./Plots/p4_1_count.png", plot = p4, width = 10, height = 6, dpi = 400)
 
 #5. I want to know the sp count of the lowest DSR accessions
 lowest_dsr <- read.csv("./Data/low_dsr.csv") 
