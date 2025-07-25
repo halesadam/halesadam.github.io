@@ -57,7 +57,7 @@ This is my personal website landing page which also includes information about m
 
 ---
 
-I am currently a botany student at Utah Valley University in Orem, Utah. Starting August of 2025 I will be changing positions to that of a PhD student in the Integrated Plant Sciences Program at the University of Georgia. 
+I have just started a new position of PhD candidate at the University of Georgia in Plant Breeding, Genetics, and Genomics. 
 
 ---
 
@@ -70,5 +70,7 @@ I grew up farming and ranching in northern Utah where I first developed a love f
 #### Contact 
 
 📧 Email: halesadam02@gmail.com
+
+💻 [My GitHub](http://www.github.com/halesadam)
 
 🌐 [My LinkedIn](http://www.linkedin.com/in/adam-hales-546900226)
