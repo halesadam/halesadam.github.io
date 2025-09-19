@@ -50,7 +50,7 @@ img {
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<img src="./Images/me.jpeg" alt="My Photo" style="float: right; width: 200px; margin: 10px;">
+<img src="./Images/AH_IPS.jpg" alt="My Photo" style="float: right; width: 200px; margin: 10px;">
 
 ### Hi, I'm Adam! <br> 
 This is my personal website landing page which also includes information about me, my research interests, and current/past projects.
@@ -69,7 +69,7 @@ I grew up farming and ranching in northern Utah where I first developed a love f
 
 #### Contact 
 
-📧 Email: akh82497@uga.edu
+📧 Email: adam.hales@uga.edu
 
 💻 [My GitHub](http://www.github.com/halesadam)
 
