@@ -53,11 +53,12 @@ knitr::opts_chunk$set(echo = TRUE)
 <img src="./Images/AH_IPS.jpg" alt="My Photo" style="float: right; width: 200px; margin: 10px;">
 
 ### Hi, I'm Adam! <br> 
-This is my personal website landing page which also includes information about me, my research interests, and current/past projects.
+This is my academic website landing page which also includes information about me, my research interests, and current/past projects.
 
 ---
 
-I have just started a new position as a graduate student at the University of Georgia via the Integrated Plant Sciences program. 
+
+I am currently a PhD student in Turfgrass Breeding at the University of Georgia's Institute of Plant Breeding Genetics, and Genomics in Tifton, Georgia. 
 
 ---
 
